@@ -458,6 +458,59 @@ ul#menu li.current a, ul#menu li:hover a
  
  
  
+   .serverBanner 
+   { 
+		position: relative; 
+		top: -521px;
+	}
+ 
+ 
+	.donationMeter
+	{
+		position: relative; 
+		top: -480px;
+		left: 380px;
+	}
+ 
+ 
+	.finTable {position: relative; top: -870px; left: 550px;}
+	.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe; }
+	.tg td{font-family:Arial, sans-serif;font-size:14px;padding:20px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+	.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:20px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+	.tg .tg-rd2y{font-size:16px}
+	.tg .tg-gfpx{background-color:#D2E4FC;font-size:26px;font-family:Impact, Charcoal, sans-serif !important;}
+	.tg .tg-s891{background-color:#D2E4FC;font-weight:bold;font-size:26px;font-family:Tahoma, Geneva, sans-serif !important;;color:#9a0000}
+	.tg .tg-dswl{font-size:26px;font-family:Impact, Charcoal, sans-serif !important;}
+	.tg .tg-0hwi{font-weight:bold;font-size:26px;font-family:Tahoma, Geneva, sans-serif !important;;color:#009901}
+	.tg .tg-60fs{background-color:#D2E4FC;font-weight:bold;font-size:26px;font-family:Tahoma, Geneva, sans-serif !important;;color:#f56b00}
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
