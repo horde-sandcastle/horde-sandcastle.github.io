@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Horde Sandcastle</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/Motdstyle.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+</head>
+
+<body onload="pickRandomText();" class="body" 
+  unselectable='on'
+  onselectstart='return false;' 
+  onmousedown='return false;'>
+
+	<div class="MainContent">
+		<header>
+		
+			<img id="banner" src="images/Motd.jpg">
+		
+		</header>
+	
+		
+		<aside class="top-sidebar">
+		<article id="donate">
+			<h2>Please Donate!</h2>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="MASPL3VFR4L9E">
+		<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+		<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+		</form>
+			
+			<p><b>Donations speed up development and keep the servers alive.</b></br> Thanks! </p>
+		</article>
+	</aside>
+
+	<div>
+				<img id="Adler" src="images/Adler.png">
+	</div>
+	
+	<div>
+	
+		<a class="myButton" onclick="pickNextText()">Next Tipp</a>
+		
+	</div>
+	
+	<div id="Website">
+		<h2>Visit our Website!</h2>
+		<a href="http://sandcastle.co.nf/"><b>www.sandcastle.co.nf</b></a><br>
+		<p>-->Links to the Steam Workshop site of Horde Sandcastle</p>
+		<p>-->Features general infos, FAQ, Hall of fame and Media gallery (soon)</p>
+	</div>
+	
+		<content>
+	<div id="box1">You will lose most buffs when you respawn. Some exceptions are the 400 HP upgrade, the +3 HP regeneration and the two lower armor types.</div>
+		</content>
+		
+		<input type="hidden" name="IL_IN_TAG" value="2"/>
+		
+	</div>
+	
+	
+			<script>
+var textArray = [
+    'When you die you respawn as a skeleton and change back to normal after 3 minutes. A skeleton is unable to buy weapons but has a special ability which can be activated with pressing F5.',
+'After respawn you get the weapons back you had before you died when you get out of skeleton mode. If you die as a skeleton, you’ll only own a cudgel then.',
+'If you have problems with your weapons (unable to switch or use them at all) then you have the option to reset them to the default knife set available on the dining table in the castle.',
+'Vanguard is the only class that does not start with knifes. The reason is simple: the charge which kicks in after some sprinting time does not work with knifes. Instead your view twitches.',
+'If you manage to dodge with a non-MAA weapon (e.g. Maul), you will be stuck in a ‘T-pose’. Switch to a MAA weapon (if you have one) and dodge again.',
+'Buy better equipment or buffs with your score aka gold. Earn it by killing enemies. The stronger the enemy the more score you get. Wave commanders are especially precious.',
+'Not all items are available for purchase right away. Some need to be unlocked, for instance the two tents/huts have initially blocked entrances which can be destroyed. Armor can be unlocked by clearing the dungeon.',
+'The dungeon can be cleared once a match to unlock 3 types of armor upgrades. The dungeon clearer is remembered and will be visible in a ‘hall of fame’ on the official website.',
+'There is a public score box which anybody can take money from when somebody else put it some first. It allows to give score to other players.',
+'When you join a game after the 5th wave, you get a score compensation. This is basically some starting gold allowing you to keep up with the other players.',
+'Players can spawn only after the wave was defeated or before the first wave started. The game ends if nobody is alive anymore. Not to die is the most important goal.',
+'If you survive a wave, you get a score reward. If you die, you lose score. How much depends on how you died: suicide costs more. ',
+'There is a punishment system for teamkillers. The victim can pick one of 5 options by pressing the corresponding number key. The description should appear in chat after the kill.',
+'Most weapons are available in this map for any class. However, some classes have minor issues with uncommon weapons: For instance, non-archer classes have aiming problems with ranged weapons.',
+'You can post feedback on the workshop page of this map. Any suggestions, ideas, bug reports or constructive critiques are welcome.',
+'There are several buffed weapons you will not find in vanilla Chivalry. They have the same skin but are stronger in certain ways. For instance, the treb-sling shoots cannon balls instead of pebbles. ',
+'You will lose most buffs when you respawn. Some exceptions are the 400 HP upgrade, the +3 HP regeneration and the two lower armor types.'
+];
+
+var randomNumber = 0;
+
+function pickRandomText() {
+    randomNumber = Math.floor(Math.random()*textArray.length);
+    document.getElementById("box1").innerHTML = textArray[randomNumber];
+}
+
+function pickNextText() {
+	randomNumber++;
+ if ( randomNumber >= textArray.length ) { randomNumber = 0; }
+    document.getElementById("box1").innerHTML = textArray[randomNumber];
+}
+</script>
+	
+	  <script type="text/javascript">
+var infolinks_pid = 2360258;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+
+</body>
+
+</html>

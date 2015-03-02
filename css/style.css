@@ -1,0 +1,464 @@
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal 85% Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #FFF url(../images/background.jpg);
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+p
+{ padding: 0 0 10px 0;
+  line-height: 1.7em;
+  font-size: 100% }
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ font: normal 175% Arial, Helvetica, sans-serif;
+  color: #00708C;
+  text-shadow: 1px 1px #FFF;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;}
+
+h2
+{ font: normal 165% Arial, Helvetica, sans-serif;}
+
+h3
+{ font: normal 130% Arial, Helvetica, sans-serif;
+}
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 0px 0;
+  font: normal 150% Arial, Helvetica, sans-serif;
+  line-height: 1.5em;}
+
+h5, h6
+{ font: normal 95% Arial, Helvetica, sans-serif;
+  color: #888;
+  padding-bottom: 15px;}
+
+a
+{ color: #000;
+  font-weight: bold;
+  background: transparent;
+  outline: none;
+  text-decoration: underline;}
+
+a:hover
+{ text-decoration: none;}
+
+ul
+{ margin: 2px 0 22px 30px;
+  line-height: 1.7em;
+  font-style: normal;
+  font-size: 100%;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+#main, #header, #banner, #menubar, #site_content, #footer, #content_blue
+{ margin-left: auto; 
+  margin-right: auto;}
+
+#header
+{ height: 400px;
+  width: 960px;
+  background: transparent url(../images/header.jpg) no-repeat;}
+
+#menubar
+{ width: 960px;
+  height: 100px;
+  background: transparent url(../images/transparent.png) repeat;} 
+  
+#welcome
+{ width: 360px;
+  height: 70px;
+  padding-top: 30px;
+  float: left;
+  text-align: center;
+  margin: 0 auto;}  
+   
+#welcome h1 a
+{ font: normal 150% Arial, Helvetica, sans-serif;
+  letter-spacing: -3px;
+  color: #FFF;
+  text-decoration: none;
+  text-shadow: 1px 1px #000;}
+  
+#menu_items
+{ float: right;
+  height: 75px;
+  margin-right: 20px;
+  padding-top: 25px;
+  width: 580px;}
+  
+ul#menu
+{ margin:0;
+  float: right;}
+
+ul#menu li
+{ padding: 0 0 0 0px;
+  list-style: none;
+  margin: 2px 0 0 0;
+  display: inline;
+  background: transparent;}
+
+ul#menu li a
+{ float: left;
+  font: bold 120% Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  text-shadow: none;
+  margin: 6px 0 0 10px;
+  padding: 10px 15px 10px 15px;
+  background: transparent; } 
+  
+ul#menu li.current a, ul#menu li:hover a
+{ color: #FFF;
+  background: #02C7FC;
+  background: -moz-linear-gradient(#02C7FC, #00708C);
+  background: -o-linear-gradient(#02C7FC, #00708C);
+  background: -webkit-linear-gradient(#02C7FC, #00708C);
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;  }
+
+#site_content
+{ width: 940px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 20px 20px;
+  background: transparent url(../images/transparent_light.png) repeat;} 
+  
+  #site_content_workshop
+{ width: 960px;
+  margin: 0 auto;} 
+
+.sidebar_container
+{ float: right;
+  margin: 20px 20px 0 20px;
+  width: 220px;
+  padding-left: 15px;
+  background: #4AA868;}
+
+.sidebar
+{ float: left;
+  width: 220px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;}
+
+.sidebar_item
+{ font: normal 100% Arial, Helvetica, sans-serif;
+  width: 215px;}
+
+.sidebar h2
+{ font: normal 140% Arial, Helvetica, sans-serif;
+  color: #FFF;
+  text-shadow: 0px 1px 0px #00708C;}  
+ 
+.sidebar h3
+{ color: #FFF;
+  text-shadow: 0px 1px 0px #00708C;}  
+
+.sidebar p
+{ color: #FFF;}  
+
+#content
+{ width: 665px;
+  margin-bottom: 20px;
+  float: left;}
+
+.content_item
+{ width: 665px;
+  margin-top: 20px;
+  margin-bottom: 20px;}
+  
+.content_container
+{ width: 310px;
+  padding: 5px;
+  margin-right: 10px;
+  float: left;}
+  
+.content_images_text
+{ float: left;
+  width: 665px;
+  margin-bottom: 10px;}  
+  
+.content_image
+{ width: 300px;
+  height: 150px;
+  margin-right: 10px;
+  float: left;}
+  
+.image_text
+{ width: 320px;
+  float: right;}  
+  
+  .image_text2
+{ width: 320px;
+  float: left;}  
+  
+   .text_image
+   {
+		padding:1px;
+	   border:2px solid #021a40;
+	   background-color:#ff0;
+   }
+   
+      .image_center
+   {
+		padding:1px;
+	   border:2px solid #021a40;
+	   background-color:#ff0;
+	   display: block;
+    margin-left: auto;
+    margin-right: auto
+   }
+  
+#footer
+{ width: 960px;
+  height: 20px;
+  padding-top: 20px;
+  text-align: center; 
+  background: transparent;}
+
+#footer a, #footer a:hover
+{ text-decoration: none;
+  padding-bottom: 20px;}
+
+#footer a:hover
+{ text-decoration: underline;}
+  
+ .readmore
+{ font: bold 110% Arial, Helvetica, sans-serif;
+  height: 15px;
+  margin-left: 95px;
+  width: 90px;
+  padding: 5px 5px 10px 7px;
+  background: #02C7FC;
+  background: -moz-linear-gradient(#02C7FC, #00708C);
+  background: -o-linear-gradient(#02C7FC, #00708C);
+  background: -webkit-linear-gradient(#02C7FC, #00708C);
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;}
+  
+ .readmore a
+{ color: #1D1D1D;}
+ 
+ .button_small
+{ font: normal 110% Arial, Helvetica, sans-serif;
+  height: 15px;
+  width: 90px;
+  padding: 5px 5px 10px 7px;
+  background: #02C7FC;
+  background: -moz-linear-gradient(#02C7FC, #00708C);
+  background: -o-linear-gradient(#02C7FC, #00708C);
+  background: -webkit-linear-gradient(#02C7FC, #00708C);
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;}
+  
+.button_small a
+{ color: #FFF;
+  padding-left: 5px;}
+
+.form_settings
+{ margin: 15px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 4px 0;}
+
+.form_settings span
+{ float: left; 
+  width: 280px; 
+  text-align: left;}
+  
+.form_settings input, .form_settings textarea
+{ padding: 2px; 
+  width: 299px; 
+  font: 100% arial; 
+  border: 1px solid #BBB; 
+  background: #FFF; 
+  color: #47433F;}
+  
+.form_settings input[type="checkbox"]
+{ padding: 2px 0; 
+  width: 15px; 
+  font: 100% arial; 
+  border: 0; 
+  background: #FFF; 
+  color: #47433F;
+  margin: 28px 0;}
+
+.form_settings .submit
+{ font: bold 100% arial; 
+  width: 99px; 
+  margin: 0 0 0 206px; 
+  height: 26px;
+  padding: 2px 0 3px 0;
+  cursor: pointer; 
+  background: #02C7FC;
+  background: -moz-linear-gradient(#02C7FC, #00708C);
+  background: -o-linear-gradient(#02C7FC, #00708C);
+  background: -webkit-linear-gradient(#02C7FC, #00708C);
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  color: #FFF;}
+  
+  
+  
+  
+  
+  
+  .FAQ_title {margin-bottom: 20px; margin-top: 20px;}
+ .FAQ { cursor:pointer; border: 3px solid #394954;  position: relative}
+ .FAA { display:none; border-bottom:medium solid #394954; margin-bottom: 20px; background-color:#E1E4E6; padding-top:20px;}
+ .MoreLess { font-size:3em; font-weight:bold; color:#82888C; }
+ .question { margin: 0; margin-left: 20px; display:inline; font-size:1.5em; position: absolute; top: 60%; transform: translate(0, -50%)}
+ .answer {  padding-left:10px; font-size:1.2em; }
+ 
+ 
+ 
+ 
+ 
+ /* jssor slider bullet navigator skin 05 css */
+            /*
+            .jssorb05 div           (normal)
+            .jssorb05 div:hover     (normal mouseover)
+            .jssorb05 .av           (active)
+            .jssorb05 .av:hover     (active mouseover)
+            .jssorb05 .dn           (mousedown)
+            */
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                background: url(../images/b05.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+			
+			
+			
+			
+			/* jssor slider arrow navigator skin 12 css */
+            /*
+            .jssora12l              (normal)
+            .jssora12r              (normal)
+            .jssora12l:hover        (normal mouseover)
+            .jssora12r:hover        (normal mouseover)
+            .jssora12ldn            (mousedown)
+            .jssora12rdn            (mousedown)
+            */
+            .jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(../images/a12.png) no-repeat;
+                overflow: hidden;
+            }
+
+            .jssora12l {
+                background-position: -16px -37px;
+            }
+
+            .jssora12r {
+                background-position: -75px -37px;
+            }
+
+            .jssora12l:hover {
+                background-position: -136px -37px;
+            }
+
+            .jssora12r:hover {
+                background-position: -195px -37px;
+            }
+
+            .jssora12ldn {
+                background-position: -256px -37px;
+            }
+
+            .jssora12rdn {
+                background-position: -315px -37px;
+            }
+ 
+ 
+ 
+  #bigPic
+   {
+		padding:1px;
+	   border:2px solid #021a40;
+	   background-color:#ff0;
+	   margin-top:40px;
+   }
+ 
+ #mediaScreens
+ {
+	padding:36px;
+	padding-right:0px;
+ }
+ 
+  .mediaScreen
+  {
+		padding:2px;
+		border:1px solid #021a40;
+	   background-color:#ff0;
+  }
+ 
+ #mediaSelected
+  {
+	border-color: rgb(90,90,255);
+	background-color: rgb(120, 120, 255);
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

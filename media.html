@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Horde Sandcastle</title>
+  <meta name="description" content="Offical website for the Horde Sandcastle map for Chivalry." />
+  <meta name="keywords" content="Horde Sandcastle Mod Chivalry Medieval Warfare media" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <!-- script type="text/javascript" src="../js/jssor.slider.js"></script-->
+    <script>
+
+        jQuery(document).ready(function ($) {
+
+            var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(parentWidth, 600));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+		
+		
+		
+		 // variable to store the currently selected media screen
+		var selectedImg;
+		//image picker
+		function pickImg(x, src) {
+			document.getElementById("bigPic").src = src;
+		
+			// clear the previous media screen's style to default non-selected
+			if(selectedImg)
+			{
+				selectedImg.id = "";
+			}
+			
+			// set the id to the style of a selected media-screen
+			x.id = "mediaSelected";
+			
+			// set the currently selected media screen 
+			selectedImg = x;
+	}
+	
+    </script>
+
+
+
+  <div id="main">
+
+    <div id="header">  
+	  
+	  <div id="menubar">
+	    
+		<div id="welcome">
+	      <h1><a href="#">Horde Sandcastle</a></h1>
+	    </div><!--close welcome-->
+		
+        <div id="menu_items">
+	      <ul id="menu">
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="workshop.html">Workshop</a></li>
+			<li class="current"><a href="media.html">Media</a></li>
+			<li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div><!--close menu-->
+		
+      </div><!--close menubar-->	
+	
+	</div><!--close header-->		
+    
+	<div id="site_content_workshop">
+
+	  	<!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 185px; width: 560px; height: 370px; overflow: hidden; margin-top: 20px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 560px; height: 350px; overflow: hidden;">
+            <div>
+                <iframe width="560" height="350" src="https://www.youtube.com/embed/g1Usdixs9u4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe width="560" height="350"
+src="https://www.youtube.com/embed/RQsz_2i-IjQ">
+</iframe>
+            </div>
+            <div>
+                <iframe width="560" height="350"
+src="https://www.youtube.com/embed/VkbjAYglw-E">
+</iframe>
+            </div>
+            <div>
+                <iframe width="560" height="350" src="https://www.youtube.com/embed/A1EFClWpn2Q"  frameborder="0" allowfullscreen></iframe>
+            </div>
+			<div>
+                <iframe width="560" height="350" src="https://www.youtube.com/embed/Njn-P6noYug"  frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 23px; right: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+    </div>
+	<!--close video slider--> 
+	
+	<h2 style="margin-top: 100px; font-size: 4em;" align="center">Screenshots</h2>
+	
+	<div>
+	 <img id="bigPic" src="images/screens/agatha king.jpg" height="630" width="960"/>
+	  </div>
+	  
+	  <div id="mediaScreens">
+	  <img class="mediaScreen" id="firstMediaScreen" height="128" width="170" src='images/screens/agatha king t.jpg'  onclick="pickImg(this, 'images/screens/agatha king.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/explosion t.jpg'  onclick="pickImg(this, 'images/screens/explosion.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/explosion2 t.jpg'  onclick="pickImg(this, 'images/screens/explosion2.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/skelly blurred t.jpg'  onclick="pickImg(this, 'images/screens/skelly blurred.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/spiky trap t.jpg'  onclick="pickImg(this, 'images/screens/spiky trap.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/vang fly t.jpg'  onclick="pickImg(this, 'images/screens/vang fly.jpg')"/>
+	  <img class="mediaScreen" height="128" width="170" src='images/screens/wall view t.jpg'  onclick="pickImg(this, 'images/screens/wall view.jpg')"/>
+	  </div>
+	  
+	</div><!--close site_content--> 
+ 
+  </div><!--close main-->
+  
+  <div id="footer">
+	  <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
+  </div><!--close footer-->  
+  
+  <script>
+  // select the initial media screen (marked with the 'firstMediaScreen' id)
+	pickImg(document.getElementById("firstMediaScreen"), 'images/screens/agatha king.jpg');
+    </script>
+	
+	<script type="text/javascript">
+var infolinks_pid = 2360258;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+	
+  </body>
+</html>
