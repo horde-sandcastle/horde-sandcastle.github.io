@@ -471,6 +471,13 @@ ul#menu li.current a, ul#menu li:hover a
 		top: -480px;
 		left: 380px;
 	}
+	
+	.thxNote
+	{
+		position: relative;
+		top: -720px;
+		left: 0px;
+	}
  
  
 	.finTable {position: relative; top: -900px; left: 560px;}
